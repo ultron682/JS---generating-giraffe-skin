@@ -1,8 +1,8 @@
-getNewPointText();
+getNewPointTest();
 isPointCanExistTest();
 activeTest();
 
-function getNewPointText(){
+function getNewPointTest(){
     writeTestName("1. Test tworzenia nowego punktu");
     let poissonPoint = new PoissonPoint(15, 22, 10, 10);
     let result = poissonPoint.getNewPoint(10, 10);

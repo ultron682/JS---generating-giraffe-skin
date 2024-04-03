@@ -23,7 +23,7 @@ class PoissonPoint extends Point{
         let straight = Straight.getContainingPoints(this, point);
         let a = straight.getA();
         let distance = this.#distanceY;
-        if(a >= -1 && a <= 1)
+        if(a >= -1/3 && a <= 1/3)
             distance = this.#distanceX;
         if(lenght < distance)
             return false;

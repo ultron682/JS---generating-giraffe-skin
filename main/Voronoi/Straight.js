@@ -4,6 +4,11 @@ class Straight{
     #start;
     #end;
 
+    constructor(a, b){
+        this.#a = a;
+        this.#b = b;
+    }
+
     static getPerpendicularToPoints(point1, point2){
         let straight = this.getContainingPoints(point1, point2);
         let pointBetween = this.#getPointBetweenPoints(point1, point2);
@@ -16,11 +21,6 @@ class Straight{
         if(this.#isVerticalStraight(point1, point2))
             return new StraightVertical(point1.getX());
         return this.#getStraight(point1, point2);
-    }
-
-    constructor(a, b){
-        this.#a = a;
-        this.#b = b;
     }
 
     findCommonPoint(otherStraight){
@@ -88,6 +88,8 @@ class Straight{
 
     static #getPerpendicularStraight(otherStraight, point){
         let a = this.#getPerpendicularA(otherStraight);
+        if(a > 100 || a < -100)
+            return new StraightVertical(point.getX());
         let b = this.#getB(a, point);
         return new Straight(a, b);
     }

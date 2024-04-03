@@ -1,10 +1,14 @@
 testedFiles = [ "DimensionConstants",
                 "MathUtils", "Point", "PointUtils",
                 "Voronoi/Straight", "Voronoi/StraightVertical", "Voronoi/VoronoiCell",
-                "Poisson/PoissonProces", "Poisson/PoissonPoint", ];
+                "Poisson/PoissonProces", "Poisson/PoissonPoint", 
+                "Noise/NoisePoint", "Noise/NoiseGenerator",
+                "SpikesCreator"];
 testFiles = ["MathUtils", "Point", "PointUtils",
             "Voronoi/Straight", "Voronoi/VoronoiCell",
-            "Poisson/PoissonPoint", "Poisson/PoissonProces"];
+            "Poisson/PoissonPoint", "Poisson/PoissonProces", 
+            "Noise/NoisePoint", "Noise/NoiseGenerator",
+            "SpikesCreator"];
 
 innerAllTested();
 innerAllTest();

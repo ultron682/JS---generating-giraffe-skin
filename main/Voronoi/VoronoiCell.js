@@ -22,6 +22,24 @@ class VoronoiCell{
         });
     }
 
+    createSpikes(spikesCreator){
+        for(let i = 0; i < this.#getVerticesLenght(); i++){
+            let ii = i+1;
+            if(ii == this.#getVerticesLenght())
+                ii = 0;
+            let verticeI = this.#vertices[i];
+            let verticeII = this.#vertices[ii];
+            let straightWithSpikes = spikesCreator.getStraightWithSpikes(verticeI, verticeII, this.#center);
+            for(let j = 0; j < straightWithSpikes.length-1; j++){
+                let point = straightWithSpikes[j];
+                this.#addNewVertice(point);
+            }
+        }
+        this.clearVertices();
+        this.#setVertices();
+        this.#clearNewVertices();
+    }
+
     getCenter(){
         return this.#center;
     }

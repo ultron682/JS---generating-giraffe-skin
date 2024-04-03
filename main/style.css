@@ -58,7 +58,19 @@
 #setDistanceYMin,
 #setSpineSize,
 #setSpineCount {
-     width: 55px;
+     width: 60px;
      border: none;
      border-bottom: 1px solid #b6b6b6;
+}
+
+svg{
+     margin-left: 5px;
+}
+
+#spinner{
+     visibility: hidden;
+}
+
+.giraffeTypes button{
+     font-size: 15px;
 }
